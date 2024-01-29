@@ -1,24 +1,14 @@
+import ColorStrip from "./components/ColorStrip";
+import PdfViewer from "./components/PDFViewer";
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <PdfViewer/>
+      <ColorStrip/>
+    </main>
   );
 }
 
