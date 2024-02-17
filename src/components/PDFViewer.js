@@ -39,19 +39,18 @@ function PdfViewer() {
   const newplugin = defaultLayoutPlugin();
 
   return (
-    <div className="w-full flex flex-col justify-center">
-      <form onSubmit={(e) => handleSubmit(e)}>
+    <div className="h-[98vh] w-full flex flex-col justify-between bg-gray-500">
+      <form className="w-full flex flex-row justify-around" onSubmit={(e) => handleSubmit(e)}>
         <input
           name="upload"
           type="file"
           accept="application/pdf/"
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="text-white bg-slate-800 px-4 py-2 rounded-xl">Submit</button>
       </form>
-      <h2>View pdf</h2>
       <ColorStrip/>
-      <div className="w-full">
+      <div className="flex justify-between w-full overflow-scroll">
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
           {viewPdf && (
             <>

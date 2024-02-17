@@ -15,7 +15,7 @@ const ColorStrip = () => {
   
   window.addEventListener("mousemove", function(e){
     coords.x = e.clientX;
-    coords.y = e.clientY;
+    coords.y = e.clientY; 
     
   });
   
@@ -33,7 +33,7 @@ const ColorStrip = () => {
       circle.x = x;
       circle.y = y;
   
-      const nextCircle = circles[index + 1] || circles[0];
+      const nextCircle = circles[index + 1] || circles[1];
       x += (nextCircle.x - x) * 0.3;
       y += (nextCircle.y - y) * 0.3;
     });
@@ -46,12 +46,12 @@ const ColorStrip = () => {
 
   return (
     <div>
-      <button
+      {/* <button
         className="rounded-xl bg-blue-600 w-fit px-6 py-2 text-white"
         // onClick={toggleColorStrip}
       >
         Start Color Strip
-      </button>
+      </button> */}
   <div class="circle"></div> 
   <div class="circle"></div>
   <div class="circle"></div>
@@ -72,6 +72,7 @@ const ColorStrip = () => {
   <div class="circle"></div>
   <div class="circle"></div>
   <div class="circle"></div>
+  
     </div>  
   );
 };
